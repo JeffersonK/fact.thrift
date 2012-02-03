@@ -26,8 +26,8 @@ enum ContentType {
 typedef i64 MicroTimestamp
 
 struct PhysicalLocation {
-  1: required double lat;
-  2: required double long;
+  1: required double lattitude;
+  2: required double longitude;
 }
 
 struct VirtualLocation {
@@ -52,10 +52,10 @@ struct CheckPoint {
 struct AlephNullFact {
   1: required string developer_key;
   2: required string application_key;
-  3: required string p_uuid //physical uuid
-  4: optional PhysicalLocation p_loc  
-  5: optional string v_uuid //virtual uuid
-  6: optional VirtualLocation v_loc
+  3: required string p_uuid; //physical uuid
+  4: optional PhysicalLocation p_loc;  
+  5: optional string v_uuid; //virtual uuid
+  6: optional VirtualLocation v_loc;
   7: required MicroTimestamp utc_tx;
   8: optional MicroTimestamp utc_rx;
   9: required i32 sequence_num; //restarts at 0 everytime a client connects to an agent
